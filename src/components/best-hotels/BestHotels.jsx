@@ -5,6 +5,7 @@ import image_4 from '../../../public/assets/hr_4.jpg'
 import image_5 from '../../../public/assets/hr_5.jpg'
 import image_6 from '../../../public/assets/hr_6.jpg'
 import image_7 from '../../../public/assets/hr_7.jpg'
+import Card from './Card'
 
 const BestHotels = () => {
     const data = [
@@ -74,7 +75,9 @@ const BestHotels = () => {
                     Best Hotels
                 </h3>
                 <div className="flex flex-wrap items-center gap-14">
-
+                {data.map((place, inx) => (
+                    <Card key={inx} place={place}/>
+                ))}
                 </div>
             </div>
         </div>
